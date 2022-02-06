@@ -1,5 +1,7 @@
 # bcfm-case
 
-docker build -t flask-api-new .
+#docker image oluşturmak için yani build almak için kullanılan komut. "-t" ile image'ın adını ve tagını yazıyoruz.
+docker build -t flask-api-new:v1 . 
 
-docker run -d -p 5000:5000 flask-api-new
+#build ettiğim image'ı bir portta(localde) çalıştırmak için kullanılan komut. "-d" docker containerının backgroundta çalışmasını sağlıyor. "-p" ise bir portta publish etmeyi sağlıyor.
+docker run -d -p 5000:5000 flask-api-new:v1
